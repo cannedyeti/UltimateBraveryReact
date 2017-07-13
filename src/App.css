@@ -3,7 +3,21 @@
 }
 
 body {
-  background-color: #d9d9d9;
+  background-color: white;
+  /*background-color: #d9d9d9;*/
+}
+
+.nav {
+  background: rgb(114,181,115);
+}
+
+.nav a {
+  color: white;
+  font-size: 30px;
+}
+
+.content-container {
+  min-height: 500px;
 }
 
 ul {
@@ -20,7 +34,7 @@ ul li {
 }
 
 .foot {
-  background-color: grey;
+  background-color: rgb(114,181,115);
   height: 50px;
 }
 
@@ -28,83 +42,9 @@ ul li {
   padding-top: 15px;
 }
 
-ul.matchInfo {
-  display: block;
-}
-
-ul.matchInfo li{
-  padding: 10px;
-}
-
-.ranked-league-container {
-  margin-left: 20px; 
-  font-size: 11px;
-  background-color: #FFFFFF;
-  padding: 10px;
-  border: .5px solid grey;
-}
-
-.ranked-league-container p {
-  margin-top: 10px;
-}
-
-.ranked-league {
-  height: 200px;
-}
-
-.ranked-league-rank {
-  font-size: 12px;
-  text-align: left;
-}
-
-.ranked-league-point {
-  text-align: left;
-}
-
-.ranked-league-type {
-  
-}
-
-.ranked-league-name {
-  
-  color: grey;
-}
-
-.ranked-league-win-loss {
-  text-align: right;
-}
-
-.ranked-league-win-percentage {
-  text-align: right;
-}
-
-.rank-image {
-  height: 80px;
-}
-
-.profile-icon {
-  height: 100px;
-}
-
-.profile-header {
-  text-align: left;
-  margin: 50px;
-}
-
-.summoner-name {
-  margin-left: 50px;
-  font-size: 40px;
-}
-
-.recent-match-champ-image {
-  height: 50px;
-  border-radius: 50%;
-}
-
-.recent-match {
-  width: 99%;
-  padding: 3px;
-  padding-right: 20px;
+.foot a {
+  /*color: rgb(114,181,115);*/
+  color: white;
 }
 
 .sum-spell {
@@ -113,6 +53,7 @@ ul.matchInfo li{
 
 .ultimate-champion-image {
   height: 60px;
+  padding: 2px;
 }
 
 .ultimate-container {
@@ -120,15 +61,70 @@ ul.matchInfo li{
 }
 
 .brave-button {
+  display: inline-block;
   font-size: 25px;
   margin-top: 200px;
-  background: #d9d9d9;
-  border: 4px solid black;
-  color: black;
+  transform: skewX(20deg);
+  background: rgb(114,181,115);
+  color: white;
+  border: none;
+}
+
+.brave-button span {
+  display: block;
+  transform: skewX(-20deg);
+  padding: 3px 8px 3px 8px;
 }
 
 .brave-button:hover {
-  border: 4px solid #d9d9d9;
-  background: black;
-  color: #d9d9d9;
+  border: none;
+  background: white;
+  color: rgb(114,181,115);
+}
+
+/*rid of button blue outline*/
+button:focus {outline:0;}
+
+.league-logo {
+  height: 300px;
+}
+
+.champ-button {
+  background-color: white;
+  border: none;
+  display: inline-block;
+  font-size: 15px;
+  transform: skewX(20deg);
+}
+
+.champ-button:hover {
+  background-color: rgba(0,0,0,.3);
+  border: none;
+  display: inline-block;
+  font-size: 15px;
+  transform: skewX(20deg);
+  color: white;
+}
+
+
+.champ-button span {
+  display: block;
+  transform: skewX(-20deg);
+  padding: 3px 8px 3px 8px;
+}
+
+.selected-champ {
+  margin-top: 20px;
+}
+
+.summoner-spells {
+  padding: 3px;
+}
+
+.summoner-spells img {
+  padding: 3px;
+}
+
+.selected-items img {
+  padding: 3px;
 }

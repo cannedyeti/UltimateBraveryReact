@@ -43,7 +43,7 @@ class UltimateContainer extends React.Component {
     return(
       <div className='row ultimate-container'>
         <div className="col-xs-4 col-xs-offset-1">
-          <button onClick={this.getChampion} className="brave-button">Make a mother fucker brave</button>
+          <button onClick={this.getChampion} className="brave-button"><span>Make a mother fucker brave</span></button>
           {!this.state.selectedChampion ? <p>Please select a champion...</p> : 
             <RandomChampion id={this.state.selectedChampion} />
           }

@@ -36,7 +36,7 @@ class ItemSelect extends React.Component{
   render() {
     return(
       <div>
-        <div>
+        <div className="selected-items">
           <img alt={this.state.boots.name} src={'http://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/' + this.state.boots.image.full} />
           {this.state.ultimateItems.map((item, index)=> {
             return <img key={index} alt={item} src={'http://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/' + item + '.png'} />

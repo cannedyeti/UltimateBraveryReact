@@ -48,19 +48,23 @@ class UltimateChamps extends React.Component {
 
     return ( 
       <div className='col-xs-6 col-xs-offset-1'>
-        <button onClick={() => {
-          this.props.getChamp(champIds)
-          this.setState({
-            champIdArray: champIds
-          })  
-        }}>Select All Champions</button>
+        <button 
+          className="champ-button"
+          onClick={() => {
+            this.props.getChamp(champIds)
+            this.setState({
+              champIdArray: champIds
+            })  
+        }}><span>Select All Champions</span></button>
 
-        <button onClick={() => {
-          this.props.getChamp([])
-          this.setState({
-            champIdArray: []
-          })  
-        }}>Deselect All Champions</button>
+        <button 
+          className="champ-button"
+          onClick={() => {
+            this.props.getChamp([])
+            this.setState({
+              champIdArray: []
+            })  
+        }}><span>Deselect All Champions</span></button>
 
         <br />
         {champArr.map((champ, index) => {

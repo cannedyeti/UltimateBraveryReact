@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+const Logo = require('./img/league-logo.png');
 const Home = require('./components/Home');
 const Nav = require('./components/Nav');
 const UltimateContainer = require('./components/ultimate-bravery/UltimateContainer');
@@ -16,16 +17,18 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <h1>League Of Legends React</h1>
-            <Nav />
+          <img alt="league-logo" className="league-logo" src={Logo} />
+          <Nav />
+          <div className="content-container">
             <Switch>
-                <Route exact path='/' component={Home}/>
-                <Route path='/ultimate-bravery' component={UltimateContainer}/>
-                <Route render={function() {
-                  return <p>404 Not Found</p>
-                }} />
-              </Switch>
-              <Footer />
+              <Route exact path='/' component={Home}/>
+              <Route path='/ultimate-bravery' component={UltimateContainer}/>
+              <Route render={function() {
+                return <p>404 Not Found</p>
+              }} />
+            </Switch>
+          </div>
+          <Footer />
         </div>
       </Router>
     );

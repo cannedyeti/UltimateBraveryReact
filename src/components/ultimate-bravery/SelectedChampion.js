@@ -84,7 +84,7 @@ class SelectedChampion extends React.Component {
     var champion = this.state.champ;
     var sums = this.state.summoners;
     return(
-      <div>
+      <div className='selected-champ'>
         <img alt={champion.name} src={"http://ddragon.leagueoflegends.com/cdn/7.12.1/img/champion/" + champion.image.full} />
         <div className='summoner-spells'>
           {this.state.summoners ? 
