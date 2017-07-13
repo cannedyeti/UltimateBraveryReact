@@ -1,6 +1,9 @@
 {
   "name": "ultimate-bravery-two",
   "version": "0.1.0",
+  "engines": {
+    "node": "6.10.0"
+  },
   "private": true,
   "dependencies": {
     "react": "^15.6.1",
