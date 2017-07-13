@@ -1,0 +1,134 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: #d9d9d9;
+}
+
+ul {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+ul li {
+  text-decoration: none;
+  list-style-type: none;
+  padding: 20px;
+}
+
+.foot {
+  background-color: grey;
+  height: 50px;
+}
+
+.foot p {
+  padding-top: 15px;
+}
+
+ul.matchInfo {
+  display: block;
+}
+
+ul.matchInfo li{
+  padding: 10px;
+}
+
+.ranked-league-container {
+  margin-left: 20px; 
+  font-size: 11px;
+  background-color: #FFFFFF;
+  padding: 10px;
+  border: .5px solid grey;
+}
+
+.ranked-league-container p {
+  margin-top: 10px;
+}
+
+.ranked-league {
+  height: 200px;
+}
+
+.ranked-league-rank {
+  font-size: 12px;
+  text-align: left;
+}
+
+.ranked-league-point {
+  text-align: left;
+}
+
+.ranked-league-type {
+  
+}
+
+.ranked-league-name {
+  
+  color: grey;
+}
+
+.ranked-league-win-loss {
+  text-align: right;
+}
+
+.ranked-league-win-percentage {
+  text-align: right;
+}
+
+.rank-image {
+  height: 80px;
+}
+
+.profile-icon {
+  height: 100px;
+}
+
+.profile-header {
+  text-align: left;
+  margin: 50px;
+}
+
+.summoner-name {
+  margin-left: 50px;
+  font-size: 40px;
+}
+
+.recent-match-champ-image {
+  height: 50px;
+  border-radius: 50%;
+}
+
+.recent-match {
+  width: 99%;
+  padding: 3px;
+  padding-right: 20px;
+}
+
+.sum-spell {
+  height: 35px;
+}
+
+.ultimate-champion-image {
+  height: 60px;
+}
+
+.ultimate-container {
+  margin: 10px;
+}
+
+.brave-button {
+  font-size: 25px;
+  margin-top: 200px;
+  background: #d9d9d9;
+  border: 4px solid black;
+  color: black;
+}
+
+.brave-button:hover {
+  border: 4px solid #d9d9d9;
+  background: black;
+  color: #d9d9d9;
+}
