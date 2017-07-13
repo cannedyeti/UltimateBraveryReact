@@ -4,7 +4,6 @@
 
 body {
   background-color: white;
-  background-color: #d9d9d9;
   font-family: 'Ubuntu Condensed', sans-serif;
 }
 
@@ -96,7 +95,7 @@ ul li {
 }
 
 /*rid of button blue outline*/
-button:focus {outline:0;}
+/*button:focus {outline:0;}
 ul.nav a:visited{background: rgb(114,181,115);}
 
 .league-logo {
@@ -108,7 +107,7 @@ ul.nav a:visited{background: rgb(114,181,115);}
   border: none;
   display: inline-block;
   font-size: 15px;
-  /*transform: skewX(-20deg);*/
+  transform: skewX(-20deg);
 }
 
 .champ-button:hover {
@@ -122,7 +121,7 @@ ul.nav a:visited{background: rgb(114,181,115);}
 
 .champ-button span {
   display: block;
-  /*transform: skewX(20deg);*/
+  transform: skewX(20deg);
   padding: 3px 8px 3px 8px;
 }
 
@@ -140,4 +139,4 @@ ul.nav a:visited{background: rgb(114,181,115);}
 
 .selected-items img {
   padding: 3px;
-}
+}*/
