@@ -1,33 +1,19 @@
 import React, { Component } from 'react';
+import logo from './logo.svg';
 import './App.css';
-const Home = require('./components/Home');
-const Nav = require('./components/Nav');
-const UltimateContainer = require('./components/ultimate-bravery/UltimateContainer');
-const Footer = require('./components/Footer');
-var ReactRouter = require('react-router-dom');
-var Router = ReactRouter.BrowserRouter;
-var Route = ReactRouter.Route;
-var Switch = ReactRouter.Switch;
-
 
 class App extends Component {
-
   render() {
     return (
-      <Router>
-        <div className="App">
-          <h1>League Of Legends React</h1>
-            <Nav />
-            <Switch>
-                <Route exact path='/' component={Home}/>
-                <Route path='/ultimate-bravery' component={UltimateContainer}/>
-                <Route render={function() {
-                  return <p>404 Not Found</p>
-                }} />
-              </Switch>
-              <Footer />
+      <div className="App">
+        <div className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h2>Welcome to React</h2>
         </div>
-      </Router>
+        <p className="App-intro">
+          To get started, edit <code>src/App.js</code> and save to reload.
+        </p>
+      </div>
     );
   }
 }
