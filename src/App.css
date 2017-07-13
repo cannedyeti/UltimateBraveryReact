@@ -1,10 +1,10 @@
-.App {
+/*.App {
   text-align: center;
 }
 
 body {
   background-color: white;
-  /*background-color: #d9d9d9;*/
+  background-color: #d9d9d9;
   font-family: 'Ubuntu Condensed', sans-serif;
 }
 
@@ -18,7 +18,7 @@ body {
 }
 
 ul.nav a:hover {
-  /*transform: translateX(5px);*/
+  transform: translateX(5px);
   background: rgb(114,181,115);
 }
 
@@ -57,7 +57,7 @@ ul li {
 }
 
 .foot a {
-  /*color: rgb(114,181,115);*/
+  color: rgb(114,181,115);
   color: white;
 }
 
@@ -78,7 +78,7 @@ ul li {
   display: inline-block;
   font-size: 25px;
   margin-top: 100px;
-  /*transform: skewX(20deg);*/
+  transform: skewX(20deg);
   background: rgb(114,181,115);
   color: white;
   border: none;
@@ -86,7 +86,7 @@ ul li {
 
 .brave-button span {
   display: block;
-  /*transform: skewX(-20deg);*/
+  transform: skewX(-20deg);
   padding: 3px 8px 3px 8px;
 }
 
@@ -96,9 +96,9 @@ ul li {
   color: rgb(114,181,115);
 }
 
-/*rid of button blue outline*/
-/*button:focus {outline:0;}*/
-/*ul.nav a:visited{background: rgb(114,181,115);}*/
+rid of button blue outline
+button:focus {outline:0;}
+ul.nav a:visited{background: rgb(114,181,115);}
 
 .league-logo {
   height: 300px;
@@ -109,7 +109,7 @@ ul li {
   border: none;
   display: inline-block;
   font-size: 15px;
-  /*transform: skewX(-20deg);*/
+  transform: skewX(-20deg);
 }
 
 .champ-button:hover {
@@ -123,7 +123,7 @@ ul li {
 
 .champ-button span {
   display: block;
-  /*transform: skewX(20deg);*/
+  transform: skewX(20deg);
   padding: 3px 8px 3px 8px;
 }
 
@@ -141,4 +141,4 @@ ul li {
 
 .selected-items img {
   padding: 3px;
-}
+}*/
