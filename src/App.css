@@ -80,6 +80,7 @@ ul li {
   color: rgb(114,181,115);
 }
 
+
 /*rid of button blue outline*/
 button:focus {outline:0;}
 ul.nav a:visited{background: rgb(114,181,115);}
