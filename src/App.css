@@ -78,7 +78,7 @@ ul li {
   display: inline-block;
   font-size: 25px;
   margin-top: 100px;
-  transform: skewX(20deg);
+  /*transform: skewX(20deg);*/
   background: rgb(114,181,115);
   color: white;
   border: none;
@@ -86,7 +86,7 @@ ul li {
 
 .brave-button span {
   display: block;
-  transform: skewX(-20deg);
+  /*transform: skewX(-20deg);*/
   padding: 3px 8px 3px 8px;
 }
 
@@ -97,8 +97,8 @@ ul li {
 }
 
 /*rid of button blue outline*/
-button:focus {outline:0;}
-ul.nav a:visited{background: rgb(114,181,115);}
+/*button:focus {outline:0;}*/
+/*ul.nav a:visited{background: rgb(114,181,115);}*/
 
 .league-logo {
   height: 300px;
@@ -109,7 +109,7 @@ ul.nav a:visited{background: rgb(114,181,115);}
   border: none;
   display: inline-block;
   font-size: 15px;
-  transform: skewX(-20deg);
+  /*transform: skewX(-20deg);*/
 }
 
 .champ-button:hover {
@@ -123,7 +123,7 @@ ul.nav a:visited{background: rgb(114,181,115);}
 
 .champ-button span {
   display: block;
-  transform: skewX(20deg);
+  /*transform: skewX(20deg);*/
   padding: 3px 8px 3px 8px;
 }
 
