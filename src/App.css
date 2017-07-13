@@ -16,8 +16,8 @@ body {
   font-size: 30px;
 }
 
-ul.nav a:hover {
-  /*transform: translateX(5px);*/
+/*ul.nav a:hover {
+  transform: translateX(5px);
   background: rgb(114,181,115);
 }
 
@@ -38,7 +38,7 @@ ul {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-}
+}*/
 
 /*ul li {
   text-decoration: none;
