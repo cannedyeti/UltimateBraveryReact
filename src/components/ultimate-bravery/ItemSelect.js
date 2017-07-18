@@ -14,6 +14,14 @@ class ItemSelect extends React.Component{
   componentWillMount() {
     var smiteItems = ItemAPI.getSmite;
     var ultimateArray = this.state.items;
+    var items = ItemAPI.getItems;
+    items = items.data
+    var temp = {};
+    for (var i in items) {
+      if (items[i].name === "Talisman of Ascension") {
+        console.log(items[i])
+      }
+    }
     var bootsArr = this.state.boots;    
     var arr = []
     var boots = bootsArr[Math.floor(Math.random()*bootsArr.length)]
