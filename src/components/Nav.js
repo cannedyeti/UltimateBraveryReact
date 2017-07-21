@@ -14,6 +14,11 @@ function Nav () {
           Ultimate Bravery
         </NavLink>
       </li>
+      <li>
+        <NavLink  to='/ultimate-10s'>
+          Ultimate 10s
+        </NavLink>
+      </li>
     </ul>
   )
 }

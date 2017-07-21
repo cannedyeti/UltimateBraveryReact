@@ -4,6 +4,7 @@ const Logo = require('./img/league-logo.png');
 const Home = require('./components/Home');
 const Nav = require('./components/Nav');
 const UltimateContainer = require('./components/ultimate-bravery/UltimateContainer');
+const Ultimate10s = require('./components/ultimate-bravery/Ultimate10s');
 const Footer = require('./components/Footer');
 var ReactRouter = require('react-router-dom');
 var Router = ReactRouter.BrowserRouter;
@@ -23,6 +24,7 @@ class App extends Component {
             <Switch>
               <Route exact path='/' component={Home}/>
               <Route path='/ultimate-bravery' component={UltimateContainer}/>
+              <Route path='/ultimate-10s' component={Ultimate10s}/>
               <Route render={function() {
                 return <p>404 Not Found</p>
               }} />
