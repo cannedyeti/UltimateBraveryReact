@@ -85,16 +85,16 @@ class SelectedChampion extends React.Component {
     var sums = this.state.summoners;
     return(
       <div className='selected-champ'>
-        <img alt={champion.name} src={"http://ddragon.leagueoflegends.com/cdn/7.12.1/img/champion/" + champion.image.full} />
+        <img alt={champion.name} src={"http://ddragon.leagueoflegends.com/cdn/7.14.1/img/champion/" + champion.image.full} />
         <div className='summoner-spells'>
           {this.state.summoners ? 
             sums.map((sum, index) => {
-              return <img key={sum} alt={sum} src={'http://ddragon.leagueoflegends.com/cdn/7.12.1/img/spell/' + sum + '.png'} />
+              return <img key={sum} alt={sum} src={'http://ddragon.leagueoflegends.com/cdn/7.14.1/img/spell/' + sum + '.png'} />
             })
            : null }
         </div>
         <h3>{this.state.adjective} {champion.name}</h3>
-        {/*<img src={'http://ddragon.leagueoflegends.com/cdn/7.12.1/img/spell/'}/>*/}
+        {/*<img src={'http://ddragon.leagueoflegends.com/cdn/7.14.1/img/spell/'}/>*/}
         {this.state.adjective ? <ItemSelect smiteBool={this.state.smite}/> : null}
       </div>
     )
