@@ -16,6 +16,7 @@ class Ultimate10s extends React.Component {
     })
   }
   render() {
+    var players = this.state.players;
     console.log("players", this.state.players)
     return (
       <div>
@@ -24,7 +25,11 @@ class Ultimate10s extends React.Component {
             <textarea id="players" placeholder="enter players, one per line"></textarea>
             <button onClick={this.setPlayers}>Make teams brave</button>
           </div>
-        : null }
+        : <div> 
+          { players.map((player, index)=> {
+            return <h2 key={index}>{player}</h2>
+          })}
+        </div>}
       </div>
     )
   }
