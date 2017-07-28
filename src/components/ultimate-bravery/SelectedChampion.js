@@ -29,7 +29,7 @@ class SelectedChampion extends React.Component {
     })
   }
   defineSmite() {
-    var bool = Math.random() >= 0.5;
+    var bool = Math.random() >= 0.75;
     let sums = this.getSums(bool);
     if (bool) {
       this.setState({
