@@ -9,7 +9,7 @@ class Player extends React.Component{
   }
   render() {
     return(
-      <div>
+      <div className="player-name">
         {this.props.name}
       </div>
     )

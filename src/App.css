@@ -126,3 +126,17 @@ ul.nav a:visited{background: rgb(114,181,115);}
 .input {
   margin-top: 20px;
 }
+
+.teams {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.player-name {
+  font-size: 60px;
+}
+
+.team-player {
+  padding: 20px;
+}
