@@ -45,9 +45,9 @@ class ItemSelect extends React.Component{
     return(
       <div>
         <div className="selected-items">
-          <img alt={this.state.boots.name} src={'http://ddragon.leagueoflegends.com/cdn/7.14.1/img/item/' + this.state.boots.image.full} />
+          <img alt={this.state.boots.name} src={'http://ddragon.leagueoflegends.com/cdn/7.15.1/img/item/' + this.state.boots.image.full} />
           {this.state.ultimateItems.map((item, index)=> {
-            return <img key={index} alt={item} src={'http://ddragon.leagueoflegends.com/cdn/7.14.1/img/item/' + item + '.png'} />
+            return <img key={index} alt={item} src={'http://ddragon.leagueoflegends.com/cdn/7.15.1/img/item/' + item + '.png'} />
           })}
         </div>
       </div>

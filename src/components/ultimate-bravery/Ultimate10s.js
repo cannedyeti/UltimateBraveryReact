@@ -55,7 +55,6 @@ class Ultimate10s extends React.Component {
     for (var c in champs.champs.data) {
       champArr.push(champs.champs.data[c])
     }
-    console.log('champArr', champArr)
     return (
       <div>
         {!this.state.players.length ? 

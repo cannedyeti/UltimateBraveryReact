@@ -140,3 +140,16 @@ ul.nav a:visited{background: rgb(114,181,115);}
 .team-player {
   padding: 20px;
 }
+
+.first-spell {
+  margin-left: 5px;
+}
+
+.spell-key {
+  position: relative;
+  left: -20px;
+  bottom: -20px;
+  background: white;
+  padding: 1px 5px;
+  border-radius: 10px
+}

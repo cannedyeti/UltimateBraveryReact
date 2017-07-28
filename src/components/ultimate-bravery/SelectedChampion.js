@@ -10,17 +10,20 @@ class SelectedChampion extends React.Component {
       champ: props.champ,
       smite: false,
       summoners: [],
-      adjective: null
+      adjective: null,
+      firstSpell: null,
+      spellKey: null
     }
     this.randomAdjective = this.randomAdjective.bind(this);
     this.defineSmite = this.defineSmite.bind(this);
     this.getSums = this.getSums.bind(this);
+    this.getFirstSpell = this.getFirstSpell.bind(this);
   }
   componentWillMount() {
     this.randomAdjective();
     this.defineSmite();
+    this.getFirstSpell();
   }
-
   randomAdjective() {
     var choices = ['Lit', 'Dank', '1%', 'Fukkboi', 'Feeder', 'FaZe', 'Calvo\'s Bitch', 'Fuck Trent', 'Thicc', 'Juice de la', 'HE SAID IT!', 'Mormon', 'Half Pound', 'Worthless']
     var a = (choices[Math.floor(Math.random()*choices.length)]);
@@ -57,6 +60,23 @@ class SelectedChampion extends React.Component {
     }
     return array;
   }
+  getFirstSpell() {
+    var champion = this.state.champ;
+    var index = Math.floor(Math.random()*3);
+    var firstSpell = champion.spells[index]
+    var spellKey;
+    if(index === 0){
+      spellKey = 'Q';
+    } else if (index === 1) {
+      spellKey = 'W';
+    } else {
+      spellKey = 'E';
+    }
+    this.setState({
+      firstSpell: firstSpell,
+      spellKey: spellKey
+    })
+  }
 
   getTwo(summoners) {
     var sumArr = [];
@@ -83,13 +103,30 @@ class SelectedChampion extends React.Component {
   render() {
     var champion = this.state.champ;
     var sums = this.state.summoners;
+    var spellKey = this.state.spellKey;
+    var firstSpell = this.state.firstSpell;
+    // var index = Math.floor(Math.random()*3);
+    // var firstSpell = champion.spells[index]
+    // var spellKey;
+    // if(index === 0){
+    //   spellKey = 'Q';
+    // } else if (index === 1) {
+    //   spellKey = 'W';
+    // } else {
+    //   spellKey = 'E';
+    // }
+
     return(
       <div className='selected-champ'>
-        <img alt={champion.name} src={"http://ddragon.leagueoflegends.com/cdn/7.14.1/img/champion/" + champion.image.full} />
+        <img alt={champion.name} src={"http://ddragon.leagueoflegends.com/cdn/7.15.1/img/champion/" + champion.image.full} />
+        {/*<div className="first-spell">*/}
+          <img className='first-spell' alt={firstSpell.image.full} src={'http://ddragon.leagueoflegends.com/cdn/7.15.1/img/spell/' + firstSpell.image.full} />
+          <span className='spell-key'>{spellKey}</span>
+        {/*</div>*/}
         <div className='summoner-spells'>
           {this.state.summoners ? 
             sums.map((sum, index) => {
-              return <img key={sum} alt={sum} src={'http://ddragon.leagueoflegends.com/cdn/7.14.1/img/spell/' + sum + '.png'} />
+              return <img key={sum} alt={sum} src={'http://ddragon.leagueoflegends.com/cdn/7.15.1/img/spell/' + sum + '.png'} />
             })
            : null }
         </div>

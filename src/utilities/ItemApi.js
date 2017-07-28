@@ -12592,6 +12592,10 @@ function getUltimateItems() {
   ultimateArray.splice(ultimateArray.indexOf(3416),1)
   ultimateArray.splice(ultimateArray.indexOf(3422),1)
   ultimateArray.splice(ultimateArray.indexOf(3599),1)
+  ultimateArray.splice(ultimateArray.indexOf(3003),1)
+  ultimateArray.splice(ultimateArray.indexOf(3004),1)
+  ultimateArray.splice(ultimateArray.indexOf(3007),1)
+  ultimateArray.splice(ultimateArray.indexOf(3008),1)
   return ultimateArray;
 }
 

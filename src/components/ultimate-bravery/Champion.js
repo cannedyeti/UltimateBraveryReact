@@ -6,7 +6,7 @@ function Champion(props) {
     <img 
     style={props.champId.includes(props.champion.id) ? {filter: 'grayscale(0%)'} : {filter: 'grayscale(100%)'} }
     onClick={props.onSelect.bind(null, props.champion.id)}
-    className="ultimate-champion-image" alt={props.champion.name} src={"http://ddragon.leagueoflegends.com/cdn/7.14.1/img/champion/" + props.champion.image.full} />
+    className="ultimate-champion-image" alt={props.champion.name} src={"http://ddragon.leagueoflegends.com/cdn/7.15.1/img/champion/" + props.champion.image.full} />
   )
 }
 
