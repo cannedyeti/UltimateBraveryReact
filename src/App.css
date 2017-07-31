@@ -85,7 +85,7 @@ ul li {
 button:focus {outline:0;}
 ul.nav a:visited{background: rgb(114,181,115);}
 .league-logo {
-  height: 300px;
+  height: 200px;
 }
 .champ-button {
   background-color: white;

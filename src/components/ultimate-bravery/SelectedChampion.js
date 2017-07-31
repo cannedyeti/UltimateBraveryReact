@@ -2,6 +2,7 @@ const React = require('react');
 const PropTypes = require('prop-types');
 const ItemSelect = require('./ItemSelect');
 const SumAPI = require('../../utilities/SummonerSpellApi');
+const ChampAPI = require('../../utilities/ChampApi');
 
 class SelectedChampion extends React.Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class SelectedChampion extends React.Component {
     this.defineSmite = this.defineSmite.bind(this);
     this.getSums = this.getSums.bind(this);
     this.getFirstSpell = this.getFirstSpell.bind(this);
+    this.reroll = this.reroll.bind(this);
   }
   componentWillMount() {
     this.randomAdjective();
@@ -45,6 +47,30 @@ class SelectedChampion extends React.Component {
         summoners: sums
       })
     }
+  }
+  reroll() {
+    var champs = ChampAPI.champ
+    var champArr = []
+    for (var c in champs.champs.data) {
+      champArr.push(champs.champs.data[c])
+    }
+    var index = Math.floor(Math.random()*champArr.length);
+    var champ = champArr[index];
+    var spellIndex = Math.floor(Math.random()*3);
+    var firstSpell = champ.spells[spellIndex];
+    var spellKey;
+    if(spellIndex === 0){
+      spellKey = 'Q';
+    } else if (spellIndex === 1) {
+      spellKey = 'W';
+    } else {
+      spellKey = 'E';
+    }
+    this.setState({
+      champ: champ,
+      spellKey: spellKey,
+      firstSpell: firstSpell
+    });
   }
   shuffleArray(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -77,7 +103,6 @@ class SelectedChampion extends React.Component {
       spellKey: spellKey
     })
   }
-
   getTwo(summoners) {
     var sumArr = [];
     var sums = SumAPI.ultimateSpells; 
@@ -99,30 +124,17 @@ class SelectedChampion extends React.Component {
       return sums;
     }
   }
-
   render() {
     var champion = this.state.champ;
     var sums = this.state.summoners;
     var spellKey = this.state.spellKey;
     var firstSpell = this.state.firstSpell;
-    // var index = Math.floor(Math.random()*3);
-    // var firstSpell = champion.spells[index]
-    // var spellKey;
-    // if(index === 0){
-    //   spellKey = 'Q';
-    // } else if (index === 1) {
-    //   spellKey = 'W';
-    // } else {
-    //   spellKey = 'E';
-    // }
 
     return(
       <div className='selected-champ'>
         <img alt={champion.name} src={"http://ddragon.leagueoflegends.com/cdn/7.15.1/img/champion/" + champion.image.full} />
-        {/*<div className="first-spell">*/}
-          <img className='first-spell' alt={firstSpell.image.full} src={'http://ddragon.leagueoflegends.com/cdn/7.15.1/img/spell/' + firstSpell.image.full} />
-          <span className='spell-key'>{spellKey}</span>
-        {/*</div>*/}
+        <img className='first-spell' alt={firstSpell.image.full} src={'http://ddragon.leagueoflegends.com/cdn/7.15.1/img/spell/' + firstSpell.image.full} />
+        <span className='spell-key'>{spellKey}</span>
         <div className='summoner-spells'>
           {this.state.summoners ? 
             sums.map((sum, index) => {
@@ -131,8 +143,8 @@ class SelectedChampion extends React.Component {
            : null }
         </div>
         <h3>{this.state.adjective} {champion.name}</h3>
-        {/*<img src={'http://ddragon.leagueoflegends.com/cdn/7.14.1/img/spell/'}/>*/}
         {this.state.adjective ? <ItemSelect smiteBool={this.state.smite}/> : null}
+        <button onClick={this.reroll}>Reroll</button>
       </div>
     )
   }
