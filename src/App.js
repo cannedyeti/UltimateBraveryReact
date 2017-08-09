@@ -11,7 +11,6 @@ var Router = ReactRouter.BrowserRouter;
 var Route = ReactRouter.Route;
 var Switch = ReactRouter.Switch;
 
-
 class App extends Component {
 
   render() {
