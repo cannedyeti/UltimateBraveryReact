@@ -27,6 +27,7 @@ class Ultimate10s extends React.Component {
     }
     var players = document.getElementById('players');
     players = players.value.split('\n');
+    players = players.slice(0,10)
     players = shuffle(players);
     this.setState({
       players: players
